@@ -6,15 +6,6 @@
 #include <thread>
 #include <future>
 
-struct Word {
-	const std::string text;
-	const std::vector<int> neighbors;
-	const int index;
-
-	Word(std::string&& _text, std::vector<int>&& _neighbors, int _index):
-		text(std::move(_text)), neighbors(std::move(_neighbors)), index(_index) {}
-};
-
 using Graph = std::vector<std::vector<int>>;
 using CliqueList = std::vector<std::vector<int>>;
 
